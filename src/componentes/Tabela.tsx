@@ -1,4 +1,4 @@
-
+import Linha from './Linha';
 
 const data = [
   { dia: 'Segunda-feira', hora: '08:00 - 10:00', disciplina: 'Matemática' },
@@ -20,7 +20,11 @@ function Tabela()
               <th>Disciplina</th>
             </tr>
           </thead>
-         
+          <tbody>
+         {data.map((entry) => (
+      <Linha {...entry} />
+            ))}
+          </tbody>
         </table>
       );
     };
